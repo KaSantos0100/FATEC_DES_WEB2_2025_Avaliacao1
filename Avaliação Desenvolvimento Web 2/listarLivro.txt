@@ -1,3 +1,7 @@
-|Autor 1|Editora 1|5451
-|Meg Cabot|Galera Record|978-8501068712
-|Meg Cabot|Editora 2|1654
+t1 | a1 | e1 | ISBN 1
+ |  |  | ISBN p1
+l1 | l1 | l1 | l1
+m1 | m1 | m1 | m1
+n1 |  |  | 
+n1 | n1 | n1 | n1
+s1 | s1 | s1 | s1

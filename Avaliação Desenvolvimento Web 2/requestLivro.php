@@ -1,31 +1,14 @@
-<?php 
-    #Informar pagina de que foi POST originalmente
+<?php
     require './cadastroLivro.php';
-    // $TituloLivro = (explode(",TituloLivro",$_POST));
-    // $Autor= (explode("Autor",$_POST));
-    // $Editora= (explode("Editora",$_POST));
-    // $ISBN= (explode("ISBN",$_POST));
-    $TituloLivro = $_POST['TituloLivro'];
-    $Autor= $_POST['Autor'];
-    $Editora = $_POST['Editora'];
-    $ISBN= $_POST['ISBN'];
+    $titulo = $_POST['tituloLivro'];
+    $autor = $_POST['autor'];
+    $editora = $_POST['editora'];
+    $isbn = $_POST['ISBN'];
 
+        $info ="$titulo | $autor | $editora | $isbn". PHP_EOL;
 
-    $conteudo = [
-        'Titulo Livro' => $TituloLivro,
-        'Autor' => $Autor,
-        'editora' => $Editora,
-        'Tombo' => $ISBN,
-];
-
-#Mudar nome dos .txts 
-    
-    $file = fopen("listarLivro.txt", "a");
-    fwrite($file, implode("|", $conteudo)); 
-  
-    
-    fflush($file);
-    fclose($file);
-    header("location: ./cadastroLivro.php");
-    #Informar pagina de origem tbm 
+        $handle = fopen("listarLivro.txt", "a");
+        fwrite($handle, $info);
+        fclose($handle);
+        header("location: ./cadastroLivro.php");
 ?>
